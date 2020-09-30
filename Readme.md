@@ -1,7 +1,7 @@
 # Django Docker Deployment
 Installer avec les commandes suivantes
 ```
-openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out config/nginx/certs/localhost.crt -keyout config/nginx/certs/localhost.key
+openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out localhost.crt -keyout localhost.key
 ```
 
 Exécuter avec la commande suivante:
