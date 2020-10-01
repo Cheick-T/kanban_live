@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: bash -c "python manage.py collectstatic --noinput && gunicorn --certfile=/etc/certs/localhost.crt --keyfile=/etc/certs/localhost.key kanban.wsgi:application --bind 0.0.0.0:443"
+    command: bash -c "python manage.py collectstatic --noinput && cp logo.png static/img/logo.png && gunicorn --certfile=/etc/certs/localhost.crt --keyfile=/etc/certs/localhost.key kanban.wsgi:application --bind 0.0.0.0:443"
     container_name: kanban_gunicorn
     volumes:
       - ./config/nginx/certs/:/etc/certs
