@@ -6,7 +6,6 @@ WORKDIR /src
 RUN git clone https://github.com/Cheick-T/kanban_system .
 RUN pip install -U pip
 RUN apt-get update
-RUN apt-get install -y apt-utils
 RUN apt-get install -y build-essential
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y python3-dev
