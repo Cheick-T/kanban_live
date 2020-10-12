@@ -1,4 +1,4 @@
-FROM python:3.7.2
+FROM python:3.6.3
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONBUFFERED 1
 RUN apt-get install -y git
