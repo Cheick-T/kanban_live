@@ -2,18 +2,18 @@ version: '3'
 
 services:
 
-  db:
-    image: mysql:8.0.21
-    container_name: kanban_mysql
-    command: mysqld --default-authentication-plugin=mysql_native_password
-    volumes:
-      - "./mysql:/var/lib/mysql"
-    ports:
-      - "3306:3306"
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=T59PNfzNSb
-      - MYSQL_DATABASE=kanban_data
+#  db:
+#    image: mysql:8.0.21
+#    container_name: kanban_mysql
+#    command: mysqld --default-authentication-plugin=mysql_native_password
+#    volumes:
+#      - "./mysql:/var/lib/mysql"
+#    ports:
+#      - "3306:3306"
+#    restart: always
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=T59PNfzNSb
+#      - MYSQL_DATABASE=kanban_data
 
   web:
     build: .
@@ -24,8 +24,8 @@ services:
       - ./src/static:/src/static
     expose:
       - "443"
-    depends_on:
-      - db
+ #   depends_on:
+ #     - db
  
   nginx:
     image: nginx:latest
