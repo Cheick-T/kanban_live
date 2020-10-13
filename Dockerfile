@@ -1,6 +1,6 @@
 FROM python:3.6.3
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONBUFFERED 1
+#ENV PYTHONDONTWRITEBYTECODE 1
+#ENV PYTHONBUFFERED 1
 RUN apt-get install -y git
 WORKDIR /src
 RUN git clone https://github.com/Cheick-T/kanban_system .
